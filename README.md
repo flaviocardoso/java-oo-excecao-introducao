@@ -28,3 +28,41 @@ try {
  throw new Excepction();
  ```
  <p>Quando ocorre uma exceção. o código para de executar. Podemos atribuir uma mensagem à exceção através do construtor.</p>
+ 
+ ## Classificação de Exceções 
+ * Implícitas: Exceções que não precisam de tratamento de demostram serem contornáveis.
+ * Explícitas: Exceções que precisam ser tratadas e que apresentam condições incontornáveis. - <b>throw</b>
+ 
+ <p>Erros dos tipos throwables: <p>
+ 
+ * Checked Exception: Erros que acontencem fora do controle do programa, mas que devem ser tratados pelo desenvolvidor para o programa funcionar.
+ * Unchecked (Runtime): Erros que podem ser evitados se forem tratados e analisados pelo desenvolvidor.
+ * Error: Usado pela JVM que serve para indicar se existe algum problema e recurso do programa, tornando a execução impossível de continuar.
+ 
+ <p> - Exceções são separadas em duas grandes categorias: aquelas que são obrigatoriariamente verificadas pelo compilador e as que não são verificadas. As primeiras são denominadas checked e são criadas através do pertencimento a uma hierarquia que não passe por RuntimeException. As segundas são as unchecked, e são criadas como descendentes de RuntimeException.
+ 
+ ## Hierarquias de exceções
+ - Throwable
+ - - Error
+ - - - StackOverflowError
+ - - Exception
+ - - - RuntimeException
+ - - - - ArithmeticException
+ - - - - NullPointerException
+ - - - IOException
+
+
+<p> - Throwable: é uma classe que precisa se extendida para que seja possível jogar um objeto na pilha, através da palavra reservada <b>throw</b></p>
+<p> - É na classe Throwable que temos praticamente todo código relacionado às exceções, inclusive ```getMessage()``` e ```printStackTrace()```. Todo o resto da hierarquia apenas possui algumas sobrecargas de construtores para comunicar mensagens específicas. </p>
+<p> - A hirarquia iniciada com a classe Throwable é dividida em exceções e erros. Exceções são usadas em códigos de aplicação. Erros são usados exclusivamente pela máquina virtual.</p>
+<p> - Classes que herdam de ```Error``` são usadas para comunicar erros na máquina virtual. Desenvolvedores de aplicação não devem criar erros que herdam de ``Èrror```.
+<p> - ```StackOverflowError``` é um erro da máquina virtual para informar que a pilha de execução não tem mais memória. </p>
+<p>Existe uma diferença entre <b>Error</b> e <b>Exception</b>. O Error é algo que não pode mais ser tratado, ao contratário da Exception que trata seus erros, pois todas as subclasses de Exception são exceções e devem ser tratadas (thowns). Os erros da classe Error ou RuntimeException são erros e não precisam de tratamento, por essse motivo é usao o <b>try/catch</b> e/ou propagação com <b>thow/thowns</b>.<p>
+
+* Exception - É a raiz das classes originárias da classe Throwable, onde mosra as situações em que a aplicação pode querer capturar e realizar um tratamento para conseguir realizar o processamento.
+* Error - Também é raiz das classes originárias da clase Throwable, indicando as situações em que a aplicação não deve tentar tratar, como ocorrências que não deveriam acontencer.
+
+
+
+#### Referências:
+> <https://www.devmedia.com.br/trabalhando-com-excecoes-em-java/27601>
