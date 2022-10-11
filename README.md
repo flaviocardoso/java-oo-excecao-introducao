@@ -28,6 +28,12 @@ try {
  throw new Excepction();
  ```
  <p>Quando ocorre uma exceção. o código para de executar. Podemos atribuir uma mensagem à exceção através do construtor.</p>
+ <p>Mais: </p>
+ 
+ * Exceções tem um nome e. caso esse nome seja expressivo, documenta o problema que está ocorrendo.
+ * Exceções podem ter uma mensagem, ou seja, o problema e o estado das variáveis podem ser descritos na mensaegem.
+ * Exceções mudam o fluxo de execução, ou seja evitam que o problema siga o fluxo "normal" quando algo excepcional acontece.
+ * Exceções podem ser tratadas, ou seja, podemos voltar para a execução "normal" caso o "problema" esteja resolvido.
  
  ## Classificação de Exceções 
  * Implícitas: Exceções que não precisam de tratamento de demostram serem contornáveis.
