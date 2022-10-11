@@ -10,6 +10,13 @@ Relembrando tratamento de exceção no Java
 ## Exceção em Java
 * Toda exceção em Java possui um nome que identifica. Exceções não tratadas caem na pilha de execução procurando por alguém que saiba lidar com ela.
 * <b>try / catch</b> : Para tratarmos uma execeção, que pode ocorrer enquanto nosso programa esta sendo executado, precimos tratá-la antecipadamente com um bloco de código específico. A lógica de tratamento de erro no bloco catch só é disparada quando uma exececução é lancada dentro de um bloco <b>try</b>.
+```
+try {
+ // tratamento de exceção. Se ocorrer execeção o catch irá executar.
+} catch (Execption ex) {
+ ex.printStackTrace();
+}
+```
 * Lancamento de exceções:
 ** Para lançar uma exceção, além de instanciá-la, é necessário lançá-la através do throw. Além de ser lança por uma variável de referencia. A execeção pode ser lançada diretamente pelo throw.
 ```
