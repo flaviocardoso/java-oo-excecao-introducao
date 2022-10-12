@@ -67,8 +67,33 @@ try {
 
 * Exception - É a raiz das classes originárias da classe Throwable, onde mosra as situações em que a aplicação pode querer capturar e realizar um tratamento para conseguir realizar o processamento.
 * Error - Também é raiz das classes originárias da clase Throwable, indicando as situações em que a aplicação não deve tentar tratar, como ocorrências que não deveriam acontencer.
-
-
+ 
+ ### try/catch/finally
+ 
+ * O bloco finally é opcional quando há bloco catch.
+ ```
+ try {}
+ catch (Exception ex) {}
+ ```
+ 
+ ```
+ try {}
+ catch (Exception ex) {}
+ finally {} 
+ ```
+ 
+ ```
+ try {}
+ finally {} 
+ ```
+ 
+ * O bloco finally sempre será executado (sem ou com exceção).
+ * O bloco finally é tipicamente utilizado para fechar um recurso como conexão ou transação.
+ * try com recurso: try-with-resources. 
+ 
+ ```
+ try (Conexao con = new Conexao()) {}
+ ```
 
 #### Referências:
 > <https://www.devmedia.com.br/trabalhando-com-excecoes-em-java/27601>
