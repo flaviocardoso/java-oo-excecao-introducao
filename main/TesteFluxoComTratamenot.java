@@ -70,3 +70,20 @@ public class TesteFluxoComTratamenot {
  * A lógica de tratamento de erro no bloco catch só é disparada quando uma exececução é lancada dentro de um bloco try.
  */
  
+/**
+ * Lancamento de exceções
+ * 
+ * Para lançar uma exceção, além de instanciá-la, é necessário lançá-la através do throw.
+ * Além de ser lança por uma variável de referencia. A execeção pode ser lançada diretamente pelo throw.
+ * Exception ex = new Exception()
+ * throw ex
+ * 
+ * ou 
+ * 
+ * throw new Excepction()
+ * 
+ * Quando ocorre uma exceção. o código para de executar.
+ * Podemos atribuir uma mensagem à exceção através do construtor.
+ * */
+
+
